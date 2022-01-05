@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas, CanvasDrawingProps } from "../components";
-import { degreesToRadians, randomInRange, randomlySpreadValue } from "../utils";
+import { degreesToRadians, randomInRange } from "../utils";
 
 export const Tunnel: React.FC = () => {
   const drawTunnel = ({ context, height, width }: CanvasDrawingProps) => {
@@ -44,7 +44,8 @@ export const Tunnel: React.FC = () => {
       context.rotate(-sliceAngle);
       context.beginPath();
 
-      const arcRadius = i * randomInRange(0.1, 5) + randomInRange(w * 2, circleRadius);
+      const arcRadius =
+        i * randomInRange(0.1, 5) + randomInRange(w * 2, circleRadius);
       const arcStartAngle = slice * -0.5;
       const arcEndAngle = slice * 5;
       context.arc(0, 0, arcRadius, arcStartAngle, arcEndAngle);

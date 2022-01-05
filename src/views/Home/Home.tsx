@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { CardGrid } from "../../components";
-import { Squares, Tunnel } from "../../art";
+import { Agents, Squares, Tunnel } from "../../art";
 
 export const Home: React.FC = () => {
   const Title = styled.h1`
@@ -18,6 +18,11 @@ export const Home: React.FC = () => {
       title: "Tunnel",
       description: "Randomized arcs and lines, looking for a depth effect.",
       canvas: <Tunnel />,
+    },
+    {
+      title: "Agents",
+      description: "Drawing agents making random shit",
+      canvas: <Agents />,
     },
   ];
   return (
