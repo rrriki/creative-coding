@@ -1,11 +1,15 @@
 import React from "react";
-import { Canvas, CanvasDrawingProps } from "../components";
+import { CanvasDrawingProps } from "../components";
+import { CanvasV2 } from "../components/CanvasV2";
 import { Agent, randomHexColor, randomInRange } from "../utils";
 
 export const Agents: React.FC = () => {
-  const drawAgents = ({ context, width, height }: CanvasDrawingProps) => {
+  const drawAgents = ({ context, width, height }: CanvasDrawingProps, frame: number) => {
+    
     const agentsCount = 40;
-
+    
+    
+    
     for (let i = 0; i <= agentsCount; i++) {
       const radius = randomInRange(1, 13);
       const agent = new Agent(0, 0, radius);
@@ -21,5 +25,5 @@ export const Agents: React.FC = () => {
     }
   };
 
-  return <Canvas draw={drawAgents} animate={true} />;
+  return <CanvasV2 draw={drawAgents} animate={true} />;
 };

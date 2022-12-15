@@ -30,7 +30,7 @@ export const Canvas: React.FC<CanvasProps> = (props) => {
 
   useEffect(() => {
     console.log("running canvas useEffect");
-
+    
     canvasSketch(draw, {
       dimensions: [WIDTH, HEIGHT],
       units: "px",
