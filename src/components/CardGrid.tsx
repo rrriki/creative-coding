@@ -10,7 +10,6 @@ const Grid = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  
 `;
 
 const GridItem = styled.div`
@@ -21,9 +20,9 @@ const GridItem = styled.div`
 export const CardGrid: React.FC<CardGridProps> = (props) => {
   const { cards } = props;
   return (
-    <Grid>
+    <Grid id="card-grid">
       {cards.map((card, i) => (
-        <GridItem key={i}>
+        <GridItem key={i} className="card-grid-item">
           <Card {...card} />
         </GridItem>
       ))}
